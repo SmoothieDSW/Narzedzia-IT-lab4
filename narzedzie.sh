@@ -9,4 +9,9 @@ elif [ "$1" == "--logs" ]; then
         echo "Skrypt: $0" >> $NAZWA_PLIKU
         echo "Data: $(date)" >> $NAZWA_PLIKU
     done
+elif [ "$1" == "--help" ]; then
+    echo "Dostepne opcje:"
+    echo "  --date      - Wyswietla dzisiejsza date"
+    echo "  --logs [N]  - Tworzy N plikow log (domyslnie 100)"
+    echo "  --help      - Wyswietla te pomoc"
 fi
