@@ -13,6 +13,7 @@ case "$1" in
         done
         ;;
     --help|-h)
+        HEAD
         echo "Dostepne opcje:"
         echo "  --date, -d      - Wyswietla dzisiejsza date"
         echo "  --logs, -l [N]  - Tworzy N plikow log (domyslnie 100)"
@@ -22,5 +23,18 @@ case "$1" in
         git clone "$URL_REPOZYTORIUM" .
         export PATH="$PATH:$(pwd)"
         echo "Repozytorium sklonowane, sciezka PATH zaktualizowana."
+
+            echo "Dostepne opcje:"
+            echo "  --date, -d      - Wyswietla dzisiejsza date"
+            echo "  --logs, -l [N]  - Tworzy N plikow log (domyslnie 100)"
+            echo "  --help, -h      - Wyswietla te pomoc"
+    --help|-h)
+            echo "Dostepne opcje:"
+            echo "  --date, -d       - Wyswietla dzisiejsza date"
+            echo "  --logs, -l [N]   - Tworzy N plikow log (domyslnie 100)"
+            echo "  --init           - Klonuje repozytorium i ustawia PATH"
+            echo "  --error, -e [N]  - Tworzy N katalogow i plikow bledu (domyslnie 100)"
+            echo "  --help, -h       - Wyswietla te pomoc"
+        7286686 (Ukonczono pelny opis pomocy dla wszystkich flag)
         ;;
 esac
